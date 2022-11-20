@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
+    [SerializeField] float controlSpeed = 10f;
 
     void Update()
     {
@@ -15,9 +15,12 @@ public class PlayerController : MonoBehaviour
         
         float yThrow = Input.GetAxis("Vertical");
         
-        float Xoffset = 0.1f; 
-        float newxPost = transform.localPosition.x + Xoffset; // Contar no posição local e não posição global caso do gameObject root
+        float xOFFset = xThrow * Time.deltaTime * controlSpeed; // entrada de dados 
+        float newXPost = transform.localPosition.x + xOFFset; // Contar no posição local e não posição global caso do gameObject root
 
-        transform.localPosition = new Vector3(newxPost, transform.localPosition.y, transform.localPosition.z);
+        float yOOFset = yThrow * Time.deltaTime * controlSpeed; // entrada de dados 
+        float newYPost = transform.localPosition.y + yOOFset; // Contar no posição local e não posição global caso do gameObject root
+
+        transform.localPosition = new Vector3(newXPost, newYPost, transform.localPosition.z);
     }
 }
