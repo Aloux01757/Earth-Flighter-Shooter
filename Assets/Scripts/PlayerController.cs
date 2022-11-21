@@ -11,12 +11,20 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        
-       
+        ProcessTranslation();
+        ProcessRotation();
+    }
+
+    void ProcessRotation()
+    {
+        transform.localRotation = Quaternion.Euler(-30f, 30f, 0f);
+    }
+
+    void ProcessTranslation()
+    {
         float xThrow = Input.GetAxis("Horizontal");
-        
         float yThrow = Input.GetAxis("Vertical");
-        
+
         float xOFFSet = xThrow * Time.deltaTime * controlSpeed; // entrada de dados 
         float rawXPos = transform.localPosition.x + xOFFSet; // Contar no posição local e não posição global caso do gameObject root
         float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange); // Pegar o eixo X e limitar para esse valor 
