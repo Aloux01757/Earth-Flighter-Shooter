@@ -8,6 +8,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlSpeed = 10f;
     [SerializeField] float xRange = 5f;
     [SerializeField] float yRange = 4f;
+  
+    [SerializeField] float positionPitchFactor = -2f; // Orientação da nave e controle, Eixo Y
+    [SerializeField] float controlPitchFactor = -15f; // multiplicar a entrada de dados, Eixo Y
+
+    [SerializeField] float positionYawFactor = 2f;  // Orientação da nave e controle, Eixo X
+
+    [SerializeField] float controlRollFactor = -20f; // multiplicar a entrada de dados, Eixo X
+
+
+    float xThrow, yThrow; // Criado variaveis
 
     void Update()
     {
@@ -17,13 +27,23 @@ public class PlayerController : MonoBehaviour
 
     void ProcessRotation()
     {
-        transform.localRotation = Quaternion.Euler(-30f, 30f, 0f);
+        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor; // Controle da nave no eixo Y (Position)
+        float pitchDueToControlThrow = yThrow * controlPitchFactor; // Entrada de dados Eixo Y multiplicado por fator 
+
+
+       
+
+
+        float pitch =  pitchDueToPosition + pitchDueToControlThrow; // Posição + Fator
+        float yaw = transform.localPosition.x * positionYawFactor; // Controle da nave no eixo X (Position)
+        float roll = xThrow * controlRollFactor; // Entrada de dados Eixo X multiplicado por fator 
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
     void ProcessTranslation()
     {
-        float xThrow = Input.GetAxis("Horizontal");
-        float yThrow = Input.GetAxis("Vertical");
+        xThrow = Input.GetAxis("Horizontal");
+        yThrow = Input.GetAxis("Vertical");
 
         float xOFFSet = xThrow * Time.deltaTime * controlSpeed; // entrada de dados 
         float rawXPos = transform.localPosition.x + xOFFSet; // Contar no posição local e não posição global caso do gameObject root
