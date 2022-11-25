@@ -70,8 +70,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlSpeed: 30
-  xRange: 10
-  yRange: 7.5
+  xRange: 8.5
+  yRange: 8
   positionPitchFactor: -2
   controlPitchFactor: -15
   positionYawFactor: 2
