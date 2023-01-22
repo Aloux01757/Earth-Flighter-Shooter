@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float xRange = 5f;
     [SerializeField] float yRange = 4f;
   
+    [SerializeField] GameObject[] lasers; // array
+
     [SerializeField] float positionPitchFactor = -2f; // Orientação da nave e controle, Eixo Y
     [SerializeField] float controlPitchFactor = -15f; // multiplicar a entrada de dados, Eixo Y
 
@@ -62,12 +65,28 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetButton("Fire1"))
         {
-            Debug.Log("Shooting");
+            AcitivateLasers();
         }
         else
         {
-            return;
+            DecativateLasers();
         }
     }
+    void AcitivateLasers()
+    {
+        foreach(GameObject laser in lasers) // O foreach, compoem, o tipo de objeto, o nome você pode dar, in, lasers (array) e abrir as chaves
+        {
+            laser.SetActive(true);
+        }
+    }
+    void DecativateLasers()
+    {
+        foreach(GameObject laser in lasers) 
+        {
+            laser.SetActive(false);
+        }
+    }
+
+    
 }
 
