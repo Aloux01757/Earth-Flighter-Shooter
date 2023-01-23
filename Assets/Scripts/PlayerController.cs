@@ -6,16 +6,26 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float controlSpeed = 10f;
-    [SerializeField] float xRange = 5f;
-    [SerializeField] float yRange = 4f;
+    [Header("General Settings")]
+    [Tooltip("How fast the player ship upon up and down based in the input system of the player")] [SerializeField] float controlSpeed = 10f;
+    [Tooltip("How limited is X value the Player ship")] [SerializeField] float xRange = 5f;
+    [Tooltip("How limited is Y value the Player ship")]   [SerializeField] float yRange = 4f;
   
+  [Header("Lasers Array")]
+
+  [Tooltip("Added all the lasers Player here")]
     [SerializeField] GameObject[] lasers; // array
 
+    [Header("Based screen of the player shooting")]
+
     [SerializeField] float positionPitchFactor = -2f; // Orientação da nave e controle, Eixo Y
-    [SerializeField] float controlPitchFactor = -15f; // multiplicar a entrada de dados, Eixo Y
 
     [SerializeField] float positionYawFactor = 2f;  // Orientação da nave e controle, Eixo X
+
+[Header("Based screen of the player shooting")]
+
+    [SerializeField] float controlPitchFactor = -15f; // multiplicar a entrada de dados, Eixo Y
+
 
     [SerializeField] float controlRollFactor = -20f; // multiplicar a entrada de dados, Eixo X
 
