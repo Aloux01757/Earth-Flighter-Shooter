@@ -65,25 +65,19 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetButton("Fire1"))
         {
-            AcitivateLasers();
+            SetLasersActive(true);
         }
         else
         {
-            DecativateLasers();
+            SetLasersActive(false);
         }
     }
-    void AcitivateLasers()
+    void SetLasersActive(bool IsActive)
     {
         foreach(GameObject laser in lasers) // O foreach, compoem, o tipo de objeto, o nome você pode dar, in, lasers (array) e abrir as chaves
         {
-            laser.SetActive(true);
-        }
-    }
-    void DecativateLasers()
-    {
-        foreach(GameObject laser in lasers) 
-        {
-            laser.SetActive(false);
+            var emission = laser.GetComponent<ParticleSystem>().emission; // Importante lembre de colocar o Array para achar o emission! (No ParticleSystem)
+            emission.enabled = IsActive;
         }
     }
 
