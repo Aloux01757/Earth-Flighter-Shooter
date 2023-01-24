@@ -249,7 +249,7 @@ TerrainCollider:
   m_Material: {fileID: 0}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: cd9934cf90bbce843b2110ed65cd434c, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &755510053
 Terrain:
   m_ObjectHideFlags: 0
@@ -471,6 +471,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3359121496757112348, guid: 4ad5ec89a32cc374f9412f4bb86d5cd3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4955019876308851077, guid: 4ad5ec89a32cc374f9412f4bb86d5cd3, type: 3}
       propertyPath: m_Name
       value: Player Rig
@@ -518,6 +522,10 @@ PrefabInstance:
     - target: {fileID: 4955019876308851082, guid: 4ad5ec89a32cc374f9412f4bb86d5cd3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 355
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955564782074057819, guid: 4ad5ec89a32cc374f9412f4bb86d5cd3, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7498098951808323458, guid: 4ad5ec89a32cc374f9412f4bb86d5cd3, type: 3}
       propertyPath: Lasers.Array.size
