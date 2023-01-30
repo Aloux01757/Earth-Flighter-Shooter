@@ -192,6 +192,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27ea3c37dd043584fb4d868f8011e35f, type: 3}
+--- !u!1 &8243686615868376221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8747386524062936450, guid: 27ea3c37dd043584fb4d868f8011e35f, type: 3}
+  m_PrefabInstance: {fileID: 793619789732210975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5865782579791042387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -199,6 +204,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4955019876308851082}
     m_Modifications:
+    - target: {fileID: 921231872287550995, guid: 38f7b52a7bfab574ba87aeede6259455, type: 3}
+      propertyPath: m_RootOrder
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 1559021470576493320, guid: 38f7b52a7bfab574ba87aeede6259455, type: 3}
       propertyPath: m_Name
       value: Player Ship
@@ -247,11 +256,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5446942215385063828, guid: 38f7b52a7bfab574ba87aeede6259455, type: 3}
-      propertyPath: m_IsKinematic
+    - target: {fileID: 3652076536742307236, guid: 38f7b52a7bfab574ba87aeede6259455, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4137096567701969105, guid: 38f7b52a7bfab574ba87aeede6259455, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4137096567701969105, guid: 38f7b52a7bfab574ba87aeede6259455, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 1574481585426423303}
+    - target: {fileID: 4137096567701969105, guid: 38f7b52a7bfab574ba87aeede6259455, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 8243686615868376221}
+    - target: {fileID: 5446942215385063828, guid: 38f7b52a7bfab574ba87aeede6259455, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3652076536742307236, guid: 38f7b52a7bfab574ba87aeede6259455, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38f7b52a7bfab574ba87aeede6259455, type: 3}
 --- !u!1 &4955564782074057819 stripped
 GameObject:
@@ -333,3 +359,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27ea3c37dd043584fb4d868f8011e35f, type: 3}
+--- !u!1 &1574481585426423303 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8747386524062936450, guid: 27ea3c37dd043584fb4d868f8011e35f, type: 3}
+  m_PrefabInstance: {fileID: 7835519095456084869}
+  m_PrefabAsset: {fileID: 0}

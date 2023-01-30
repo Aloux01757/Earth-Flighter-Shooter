@@ -30,13 +30,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlRollFactor = -20f; // multiplicar a entrada de dados, Eixo X
 
 
+
+
     float xThrow, yThrow; // Criado variaveis
 
+    
     void Update()
     {
-        ProcessTranslation();
-        ProcessRotation();
-        ProcessFiring();
+            ProcessTranslation();
+            ProcessRotation();
+            ProcessFiring();
     }
 
     void ProcessRotation()
@@ -56,6 +59,8 @@ public class PlayerController : MonoBehaviour
 
     void ProcessTranslation()
     {
+
+        
         xThrow = Input.GetAxis("Horizontal");
         yThrow = Input.GetAxis("Vertical");
 
@@ -69,6 +74,8 @@ public class PlayerController : MonoBehaviour
 
 
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
+        
+
     }
 
     void ProcessFiring()
