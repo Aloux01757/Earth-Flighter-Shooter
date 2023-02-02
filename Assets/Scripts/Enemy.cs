@@ -10,6 +10,7 @@ using UnityEngine;
     ScoreBoard scoreBoard; // Declarando mas vazio
 
     int ScoreEnemies = 10; 
+    
 
     void Start() 
     {
