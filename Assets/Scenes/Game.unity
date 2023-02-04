@@ -239,6 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: 4c9d241d6594aaf46bc5bee7bc6e58a8, type: 3}
   parent: {fileID: 1358858331}
+  HitPoints: 20
 --- !u!1 &181558894
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: 4c9d241d6594aaf46bc5bee7bc6e58a8, type: 3}
   parent: {fileID: 1358858331}
+  HitPoints: 20
 --- !u!136 &181558896
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -450,6 +452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: 4c9d241d6594aaf46bc5bee7bc6e58a8, type: 3}
   parent: {fileID: 1358858331}
+  HitPoints: 20
 --- !u!136 &532395410
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -825,6 +828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: 4c9d241d6594aaf46bc5bee7bc6e58a8, type: 3}
   parent: {fileID: 1358858331}
+  HitPoints: 40
 --- !u!1 &2142708679
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,6 +863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: 4c9d241d6594aaf46bc5bee7bc6e58a8, type: 3}
   parent: {fileID: 1358858331}
+  HitPoints: 20
 --- !u!136 &2142708681
 CapsuleCollider:
   m_ObjectHideFlags: 0

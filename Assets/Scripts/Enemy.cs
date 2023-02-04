@@ -10,7 +10,10 @@ using UnityEngine;
     ScoreBoard scoreBoard; // Declarando mas vazio
 
     int ScoreEnemies = 10; 
+
+    [SerializeField] int HitPoints = 10;
     
+    int DemagePoints = 10;
 
     void Start() 
     {
@@ -24,7 +27,12 @@ using UnityEngine;
 
     void ProcessHit()
     {
-        Destroy(this.gameObject); // Destroi o inimigo como o todo
+        HitPoints -= DemagePoints;
+        if(HitPoints <= 0)
+        {
+            Destroy(this.gameObject); // Destroi o inimigo como o todo
+        }
+        
     }
 
     void KillTheEnemy()
