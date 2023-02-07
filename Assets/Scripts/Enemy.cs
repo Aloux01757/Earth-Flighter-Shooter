@@ -5,15 +5,16 @@ using UnityEngine;
     public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject deathVFX;
+    [SerializeField] GameObject HitVFX;
     [SerializeField] Transform parent;
 
     ScoreBoard scoreBoard; // Declarando mas vazio
 
     int ScoreEnemies = 10; 
 
-    [SerializeField] int HitPoints = 10;
+    [SerializeField] int HitPoints = 4;
     
-    int DemagePoints = 10;
+
 
     void Start() 
     {
@@ -21,23 +22,25 @@ using UnityEngine;
     }
     void OnParticleCollision(GameObject other)
     {
-        KillTheEnemy();
         ProcessHit();
+        if(HitPoints <= 0)
+        {
+                KillTheEnemy();
+        }
+       
     }
 
     void ProcessHit()
     {
-        HitPoints -= DemagePoints;
-        if(HitPoints <= 0)
-        {
-            Destroy(this.gameObject); // Destroi o inimigo como o todo
-        }
-        
+        GameObject vfx = Instantiate(HitVFX, transform.position, Quaternion.identity); // instancia o VFX e declara variavel
+        vfx.transform.parent = parent;  // pega variavel VFX e coloca numa parent (Children)
+        HitPoints--;
+        scoreBoard.IncreseScore(ScoreEnemies); // chamando o script do método e acresentando a pontuação
     }
 
     void KillTheEnemy()
     {
-        scoreBoard.IncreseScore(ScoreEnemies); // chamando o script do método e acresentando a pontuação
+        Destroy(this.gameObject); // Destroi o inimigo como o todo 
         GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity); // instancia o VFX e declara variavel
         vfx.transform.parent = parent;  // pega variavel VFX e coloca numa parent (Children)
     }

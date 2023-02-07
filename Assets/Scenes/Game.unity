@@ -159,7 +159,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &98638437
@@ -238,8 +238,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: 4c9d241d6594aaf46bc5bee7bc6e58a8, type: 3}
+  HitVFX: {fileID: 3200836327345539238, guid: 6039c1623025a914f82db7acce363781, type: 3}
   parent: {fileID: 1358858331}
-  HitPoints: 20
+  HitPoints: 4
 --- !u!1 &181558894
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,8 +274,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: 4c9d241d6594aaf46bc5bee7bc6e58a8, type: 3}
+  HitVFX: {fileID: 3200836327345539238, guid: 6039c1623025a914f82db7acce363781, type: 3}
   parent: {fileID: 1358858331}
-  HitPoints: 20
+  HitPoints: 4
 --- !u!136 &181558896
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -286,7 +288,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &181558897
@@ -451,8 +453,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: 4c9d241d6594aaf46bc5bee7bc6e58a8, type: 3}
+  HitVFX: {fileID: 3200836327345539238, guid: 6039c1623025a914f82db7acce363781, type: 3}
   parent: {fileID: 1358858331}
-  HitPoints: 20
+  HitPoints: 4
 --- !u!136 &532395410
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -464,7 +467,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &532395411
@@ -827,8 +830,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: 4c9d241d6594aaf46bc5bee7bc6e58a8, type: 3}
+  HitVFX: {fileID: 3200836327345539238, guid: 6039c1623025a914f82db7acce363781, type: 3}
   parent: {fileID: 1358858331}
-  HitPoints: 40
+  HitPoints: 6
 --- !u!1 &2142708679
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,8 +866,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: 4c9d241d6594aaf46bc5bee7bc6e58a8, type: 3}
+  HitVFX: {fileID: 3200836327345539238, guid: 6039c1623025a914f82db7acce363781, type: 3}
   parent: {fileID: 1358858331}
-  HitPoints: 20
+  HitPoints: 4
 --- !u!136 &2142708681
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -875,7 +880,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2142708682
