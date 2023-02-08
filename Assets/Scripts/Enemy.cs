@@ -18,6 +18,7 @@ using UnityEngine;
 
     void Start() 
     {
+        //AddRigidbody();
         scoreBoard = FindObjectOfType<ScoreBoard>(); // Não use no Update! e atribuindo 
     }
     void OnParticleCollision(GameObject other)
@@ -44,4 +45,11 @@ using UnityEngine;
         GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity); // instancia o VFX e declara variavel
         vfx.transform.parent = parent;  // pega variavel VFX e coloca numa parent (Children)
     }
+
+    /*void AddRigidbody()
+    {
+        Rigidbody rb = gameObject.AddComponent<Rigidbody>();
+        rb.useGravity = false;
+    }
+    */
 }
